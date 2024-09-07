@@ -1,4 +1,5 @@
 "use client"
+import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 
@@ -45,8 +46,8 @@ function Carousel() {
         <div className=" w-max h-full flex transition-all ease-in-out duration-1000"
             style={{transform: `translateX(-${current * 100}vw)`}} >
            {caro.map((slide)=>(
-              <div className="relative w-screen h-full flex flex-col gap-16 xl:flex-row" key={slide.id}>
-                  <div className='relative h-full w-full justify-between flex'>
+              <div className="w-screen h-full flex flex-col gap-16 xl:flex-row" key={slide.id}>
+                  <div className='relative h-full w-full flex'>
                     <Image
                         src={slide.img_url}
                         alt=''
@@ -55,10 +56,10 @@ function Carousel() {
                       className='object-cover w-full h-full'
                     />
                     
-                    <div className='absolute top-8 left-8'>
-                      <h1>{slide.title}</h1>
-                      <h3>{slide.des}</h3>
-                      <button>Shop Now{slide.link}</button>
+                    <div className='absolute top-8 w-full items-center text-white flex flex-col gap-8'>
+                      <div className='text-xl font-[500]'>{slide.title}</div>
+                      <div className='text-5xl font-[700]'>{slide.des}</div>
+                    <Button className='w-40'>Shop Now{slide.link}</Button>
                   </div>
                   </div>
               </div>

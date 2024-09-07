@@ -33,17 +33,15 @@ function FeaturedProduct() {
         reqdata()
     },[])
 
-    const handleRedirect=(id: string)=>{
-        router.push(`/productPage/${id}`);
-    }
+   
 
     
    
   return (
-    <div className='flex lg:px-15 md:px-12 px-5 h-full'>
-        <div className='flex lg:gap-8 gap-4 overflow-x-scroll overflow-y-hidden scrollbar-hide'>
+    <div className='flex lg:px-15 md:px-12 px-5 h-full w-full'>
+        <div className='flex lg:gap-8 gap-4 overflow-x-scroll overflow-y-hidden no-scrollbar'>
             {product.map((card=>(
-            <button onClick={()=>handleRedirect(card._id)} key={card.title} className='shring 0'>
+            <button key={card.title} className='shring 0'>
                 <Card
                         id={card._id}
                         title={card.title}
