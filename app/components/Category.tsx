@@ -2,6 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 
 const Category=()=> {
+    const women = `WOMEN'S`;
+    const men = `MEN'S`;
   return (
     <div className="flex flex-col lg:px-15 h-full items-center md:px-12 px-5  w-full">
         <div className="w-[38%] flex flex-col py-16 text-[18px] text-gray-400">
@@ -25,7 +27,7 @@ const Category=()=> {
                />
                <div className="absolute bg-white flex flex-col gap-3  justify-center  z-10 bottom-0 left-0 w-[50%] h-[140px] px-6">
                     <Link href="#" className="text-xs">AWARD WINNING</Link>
-                        <p className="cursor-pointer text-2xl font-[700]">WOMEN'S GLASSES</p>
+                        <p className="cursor-pointer text-2xl font-[700]">{women} GLASSES</p>
                         <Link href="#" className="text-xs underline">SHOP NOW</Link>
                </div>
             </div>
@@ -40,7 +42,7 @@ const Category=()=> {
                />
             <div className="absolute bg-white flex flex-col gap-3  justify-center  z-10 bottom-0 left-0 w-[50%] h-[140px] px-6">
                 <Link href="#" className="text-xs">NEW LINES ADDED</Link>
-                <p className="cursor-pointer text-2xl font-[700]">MEN'S SUNGLASSES</p>
+                <p className="cursor-pointer text-2xl font-[700]">{men} SUNGLASSES</p>
                 <Link href="#" className="text-xs underline">SHOP NOW</Link>
             </div>
             </div>

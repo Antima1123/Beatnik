@@ -18,7 +18,7 @@ interface productProps{
   stock: number
 } 
 
-const productpage = () => {
+const Productpage = () => {
 
   const horizontal={
     opened: {
@@ -273,4 +273,4 @@ const productpage = () => {
     )
   }
   
-  export default productpage
+  export default Productpage

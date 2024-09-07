@@ -42,7 +42,7 @@ const Card = (
     })
 
     const handleRedirect=(id: string)=>{
-        router.push(`/productPage/${id}`);
+        router.push(`/ProductPage/${id}`);
     }
 
     const ImageRight=()=> {
